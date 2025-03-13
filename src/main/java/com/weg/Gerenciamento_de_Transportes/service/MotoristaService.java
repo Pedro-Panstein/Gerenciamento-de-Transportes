@@ -45,11 +45,7 @@ public class MotoristaService {
     }
 
     public List<Motorista> getFilterText(String text) {
-        Specification.where(filterText(text).and(filterText(text)));
-        return repository.findAll(filterText(text));
-    }
-
-    public Specification<Motorista> filterText(String texto) {
-        return specification.filterText(texto);
+//        Specification.where(filterText(text).and(filterText(text)));
+        return repository.findAll(specification.filterText(text));
     }
 }

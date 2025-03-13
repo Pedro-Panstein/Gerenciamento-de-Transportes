@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor
-@NoArgsConstructor
 public class MotoristaSpecification {
     public Specification<Motorista> filterText(String texto) {
         String finalText = "%" + texto + "%";

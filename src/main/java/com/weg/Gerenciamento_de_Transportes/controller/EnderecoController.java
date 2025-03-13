@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("endereco")
 @AllArgsConstructor
-@NoArgsConstructor
 public class EnderecoController {
     private EnderecoService service;
 

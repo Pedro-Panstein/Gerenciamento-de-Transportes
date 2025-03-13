@@ -25,7 +25,7 @@ public class Motorista {
     private String telefone;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "endereco_id", referencedColumnName = "id")
+    @JoinColumn(name = "endereco_id", referencedColumnName = "id", nullable = true)
     private Endereco endereco;
 
     @OneToMany(mappedBy = "motorista", cascade = CascadeType.ALL)

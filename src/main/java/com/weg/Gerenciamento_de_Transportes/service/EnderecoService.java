@@ -5,6 +5,7 @@ import com.weg.Gerenciamento_de_Transportes.model.dtos.request.EnderecoRequestDT
 import com.weg.Gerenciamento_de_Transportes.model.dtos.response.EnderecoResponseDTO;
 import com.weg.Gerenciamento_de_Transportes.repository.EnderecoRepository;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

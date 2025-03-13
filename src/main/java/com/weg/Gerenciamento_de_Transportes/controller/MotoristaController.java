@@ -9,16 +9,18 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("motorista")
 @AllArgsConstructor
-@NoArgsConstructor
 public class MotoristaController {
     private MotoristaService service;
 
@@ -50,5 +52,12 @@ public class MotoristaController {
     public ResponseEntity<String> deletarMotorista(Long id) {
         String mensagem = service.deletarMotorista(id);
         return new ResponseEntity<>(mensagem, HttpStatus.OK);
+    }
+
+    @GetMapping("/filtro")
+    public ResponseEntity<List<Motorista>> listarFiltro(@RequestParam String filtro) {
+        System.out.println(filtro);
+        List<Motorista> motoristas = service.getFilterText(filtro);
+        return new ResponseEntity<>(motoristas, HttpStatus.OK);
     }
 }

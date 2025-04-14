@@ -12,3 +12,7 @@ WORKDIR /app/geren-transp
 
 # Definir o comando para rodar o JAR
 ENTRYPOINT ["java", "-jar", "geren-transp.jar"]
+
+
+# Este é meu docker file, onde eu defino a versão do jdk, o autor, a porque onde vai ficar exposto, o caminho do jar que é no targer
+# E também qual é o arquivo .jar que será utilizado.
